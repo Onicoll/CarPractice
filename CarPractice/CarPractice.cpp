@@ -2,19 +2,47 @@
 //
 
 #include <iostream>
+#include <string>
+#include "Car.h"
+
+void CarValues(Car car)
+{
+    std::cout << "Name: " << car.make << " " << car.model << "\n"
+        << "Doors: " << car.doors << "\n"
+        << "Mileage: " << car.mileage << "\n"
+        << "MPG: " << car.mpg << "\n"
+        << "Petrol " << car.petrol << "\n";
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Car ford;
+    Car warthog;
+    Car mongoose;
+
+    ford.make = "Ford";
+    ford.model = "Focus";
+    ford.doors = 4;
+    ford.mileage = 100;
+    ford.mpg = 1;
+    ford.petrol = 12;
+
+    warthog.make = "UNSC";
+    warthog.model = "Warthog";
+    warthog.doors = 0;
+    warthog.mileage = 9999;
+    warthog.mpg = 100;
+    warthog.petrol = 70;
+
+    mongoose.make = "UNSC";
+    mongoose.model = "Mongoose";
+    mongoose.doors = 0;
+    mongoose.mileage = 5;
+    mongoose.mpg = 5;
+    mongoose.petrol = 5;
+
+    CarValues(warthog);
+
+
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
